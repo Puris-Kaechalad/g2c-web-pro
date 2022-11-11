@@ -1,0 +1,520 @@
+/* web setting */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body{
+        font-family: 'Ubuntu', 'sans-serif';
+        margin: 0;
+        padding: 0;
+        background-color: wheat
+    }
+
+    .pages-name {
+        color: black;
+        text-align: left;
+        font-size: 72px;
+        margin: 120px auto 20px 64px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    ::-webkit-scrollbar{
+        width: 10px;
+        border-radius: 16px;
+    }
+
+    ::-webkit-scrollbar-track{
+        background-color: white;
+        border-radius: 16px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background-color: skyblue;
+        border-radius: 16px;
+    }
+
+    /* ::-webkit-scrollbar-thumb:hover{ 
+        background-color: ;
+    } */
+/* web setting */
+
+/* NAVBAR */   
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .navbar {
+        position: fixed;
+        background-color: rgba(135, 207, 235, 0.897);
+        border-radius: 16px;
+        bottom: 30px;
+        z-index: 6969;
+        box-shadow: black 0 1px 5px 1px;
+    }
+
+    .navbar-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin: 10px;
+    }
+
+    .navbar-content li {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: -4px;
+        padding: 0px;
+    }
+
+
+    .navbar-content img {
+        height: 60px;
+        width: auto;
+        padding: 10px;
+        cursor: pointer;
+        transition: height 0.2s ease-out;
+    }
+
+    .navbar-content img:hover {
+        height: 80px;
+        border-radius: 16px;
+    }
+/* NAVBAR */   
+
+/* PARALLAX BACKGROUND */
+    #bgimg {
+        display: block;
+        width: 100%;
+    }
+
+    #foreground {
+        height: 100vh;
+        width: 100%;
+        perspective: 10px;
+    }
+
+    #p-foreground {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        transform-style: preserve-3d;
+        z-index: -1;
+    }
+    #p-foreground #f-back, #f-front{
+        width: 70%;
+    }
+/* PARALLAX BACKGROUND */
+
+/* home-page*/
+    .home-page-download-bar{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    
+    .home-page-download-btn{
+        width: auto;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        vertical-align: middle;
+        background-color: skyblue;
+        margin: 16px;
+        border: 8px;
+        border-radius: 16px;
+        box-shadow: black 0 1px 5px 1px;
+        z-index: 2;
+        transition: 0.2s ease-in;
+    }
+
+    .home-page-download-btn:hover{
+        width: 265px;
+        height: 110px;
+        background-color: rgb(109, 188, 219);
+        transition: 0.2s ease-out;
+    }
+
+    .home-page-download-bar a{
+        text-decoration: none;
+    }
+    
+    .home-page-download-bar img{
+        height: auto;
+        margin: 16px;
+        padding: 0;
+    }
+
+    .download-btn-text{
+        margin: 8px;
+        text-align: right;
+        color: black;
+    }
+
+    .download-btn-text p{
+        font-size: 16px;
+        margin: 16px auto;
+    }
+
+    .download-btn-text h3{
+        font-size: 20px;
+        margin: 16px auto;
+    }
+    
+/* home-page*/
+
+/* NEWS */
+    /* scope */
+        #news h1{
+            color: black;
+            text-align: left;
+            font-size: 72px;
+            margin: 72px auto 0 64px;
+        }
+        
+        .scope-content-news{
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 10px 2px;
+            border-radius: 16px;
+            width: auto;
+            height: 650px;
+            margin: 16px 64px;
+            padding: 0;
+        }
+    /* scope */
+    /* headline */
+        .box-news-list{
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: auto;
+            height: auto;
+            margin: 0;
+            padding: 16px;
+        }
+
+        .box-news{
+            list-style-type: none;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 1px 5px 1px;
+            border-radius: 16px;
+            width: 410px;
+            box-sizing: border-box;
+            margin: 16px ;
+            padding: 0;
+            text-align: center;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            z-index: 3;
+        }
+
+        .news-photo{
+            padding-top: 51.3%;
+            width: 377px;
+            height: 0;
+            margin: 16px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid transparent;
+            border-radius: 16px;
+        }
+
+        .news-photo img{
+            left: auto;
+            top: 0;
+            z-index: 2;
+            position: absolute;
+            display: block;
+            height: 100%;
+        }
+
+        .news-headline{
+            font-size: 24px;
+            margin: 8px;
+        }
+
+        .news-content{
+            width: 380px;
+            height: 100px;
+            margin: 8px;
+            overflow-y: auto;
+        }
+        
+        .news-date{
+            font-size: 14px;
+            text-align: center;
+            color: black;
+            margin: 16px auto;
+            width: 100px;
+            height: 20px;
+        }
+    /* headline */
+/* NEWS */
+    
+/* MINI-GAMES */
+    #minigames-container {
+        background-color: rgba(0, 0, 0, 0.4);
+        width: auto;
+        height: 650px;
+        margin: 0 64px;
+        padding: 18px;
+        padding: 18px;
+        border-radius: 16px;
+        box-shadow: 0px 2px 10px 2px;
+        overflow-y: auto;
+    }
+
+    .minigames-content {
+        background-color: white;
+        box-shadow: 0 1px 5px 1px;
+        width: auto;
+        height: auto;
+        margin: 18px;
+        padding: 18px;
+        border-radius: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } 
+
+    .minigames-content-left{
+        width: auto;
+        height: auto;
+        margin: 18px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .minigames-content-name h2{
+        font-size: 32px;
+        margin: 18px;
+    }
+
+    .minigames-content-icon{
+        width: 400px;
+        height: auto;
+        margin: 18px;
+        border-radius: 16px;
+        justify-content: center;
+        vertical-align: middle;
+    }
+
+    .minigames-content-icon img{
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        border: 4px inset rgb(135, 135, 135);
+    }
+
+    .minigames-content-right{
+        width: auto;   
+        height: auto; 
+        margin: 18px;
+        padding: 18px;
+        box-sizing: border-box;
+        justify-content: flex-start;
+    }
+
+    .minigames-content-genre{
+        margin: 18px;
+        padding: 0;
+        text-align: start;
+        display: flex;
+    }
+
+    .minigames-content-genre p{
+        font-size: 16px;
+        margin: 18px;
+    }
+
+    .minigames-content-images{
+        background-color: rgb(207, 204, 204);
+        display: flex;
+        box-sizing: border-box;
+        width: 700px;
+        height: 195px;
+        padding: 16px;
+        margin: 18px;
+        border-radius: 16px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    
+    .minigames-content-images img{
+        display: block;
+        height: 100%;
+        margin: 8px;
+        border-radius: 16px;
+    }
+
+    .minigames-content-description p{
+        font-size: 16px;
+        color: black;
+        margin: 18px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .minigames-content {
+            display: block;
+        }
+        .minigames-content-images {
+            width: 300px;
+        }
+    } 
+
+/* MINI-GAMES */
+
+/* CONTACT US */
+    /* setting */
+        .box-contact-us {
+            perspective: 1000;
+            transform-style: preserve-3d;
+            display: inline-block
+        }
+
+        /* เมาส์เข้า */
+        .box-contact-us:hover .back {
+            transform: rotateY(0deg);
+        }
+        .box-contact-us:hover .front {
+            transform: rotateY(180deg);
+        }
+
+        /* เมาส์ออก */
+        .front{
+            z-index: 2;
+            transform: rotateY(0deg);
+        }
+
+        .back {
+            transform: rotateY(-180deg);
+        }
+        
+        /*เมาส์ชี้ไปที่ front, back กล่องหมุน*/
+        .front, .back {
+            backface-visibility: hidden;
+            transition: 1s;
+            transform-style: preserve-3d;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        /*front, back หันเหลี่ยมให้แต่เมาส์ยังชี้ tag นี้อยู่กล่องจะหมุนต่อไปได้*/
+        .box-contact-us-flipper{
+            transition: 1s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+    /* setting */
+
+    /* structure */
+        .scope-content-contact-us{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0;
+            margin: 0 auto;
+        }
+        
+        .box-contact-us{
+            width: 400px;
+            height: 550px;
+            margin: 0 16px 74px 16px;
+        }
+
+        .front {
+            width: 400px;
+            height: 550px;
+            background-color: rgba(255, 255, 255, 0.751);
+            box-shadow: 0 2px 10px 2px;
+            padding: 16px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .back {
+            width: 400px;
+            height: 550px;
+            background-color: rgba(255, 255, 255, 0.751);
+            box-shadow: 0 2px 10px 2px;           
+            padding: 16px;
+            border-radius: 16px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .front img{
+            box-shadow: black 0 1px 5px 1px;
+            border-radius: 400px;
+            height: 300px;
+            margin: 20px;
+        
+        }
+
+        .back img{
+            width: 100px;
+            border-radius: 16px;
+            margin: 10px;
+            transition: 0.2s ease-in-out;
+        }
+
+        .back img:hover{
+            width: 150px;
+        }
+
+        .contact-us-name {
+            font-size: 40px;
+            margin: 0 auto;
+        } 
+
+        .contact-us-descript{
+            font-size: 16px;
+            margin: 16px;
+        }
+
+        @media screen and (max-width: 1250px) {
+            .scope-content-contact-us {
+                flex-direction: column;
+            }
+        } 
+    /* structure */
+/* CONTACT US */
+
+/* FOOTER */
+    #footer {
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        bottom: 0;
+        width: 100%;
+        height: 25vh;
+        margin: 0px;
+        font-size: 12px;
+    }
+/* FOOTER */
